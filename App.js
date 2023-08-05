@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Pressable, Keyboard } from 'react-native';
+import Inicio from './components/pages/Inicio';
+import Buscador from './components/pages/Buscador';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.containerBG}>
+      <Pressable onPress={()=> Keyboard.dismiss()}>
+        <Inicio />
+      </Pressable>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  containerBG: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f000',
+    marginVertical: 50,
   },
 });
